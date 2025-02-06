@@ -1,0 +1,247 @@
+.todo-box {
+  margin: 10px;
+  padding: 10px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  width: 300px;
+  background-color: cadetblue;
+  box-shadow: 1px 1px 5px gray;
+  right: 20px;
+  position: absolute;
+}
+
+.todo-header {
+  /* border-bottom: 1px solid gray; */
+  text-align: center;
+  color: white;
+}
+
+.todo-body {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px gray inset;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.add-box {
+}
+
+.header {
+  background-color: #247d86;
+  color: white;
+}
+
+.menu-bar {
+  display: inline-flex;
+  width: 100%;
+}
+
+.menu-space {
+  width: 70%;
+}
+
+.item {
+  padding: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #51b2bd;
+}
+
+.header-display {
+  text-align: center;
+  padding: 10px;
+}
+
+.bf-logo {
+  font-size: 50px;
+  margin: 0px;
+}
+
+.bf-body {
+  padding: 20px;
+}
+
+.bf-chat {
+  width: 200px;
+  border: 1px solid gray;
+  height: 300px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.bf-chatheader {
+  width: 100%;
+  background-color: #247d86;
+  color: white;
+  height: 50px;
+}
+.bf-chatbox {
+  padding: 10px;
+}
+
+.bg-image {
+  position: absolute;
+}
+
+.car {
+  position: absolute;
+  z-index: 100;
+  width: 150px;
+  transition: top 300ms ease-out;
+}
+
+.top-lane {
+  top: 330px;
+}
+
+.bot-lane {
+  top: 390px;
+}
+
+.pokemon-list {
+  overflow: scroll;
+  height: calc(100vh - 100px);
+}
+
+.pokemon-item {
+  background-color: #184f55;
+  color: white;
+  padding: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.pokemon-item:hover {
+  background-color: #2d919c;
+}
+
+.pokedex-header {
+  height: 60px;
+  padding: 10px;
+  background-color: #082b2f;
+  color: #a2d06b;
+  display: block ruby;
+}
+
+.pokemon-display {
+  padding: 0px 20px;
+  width: 400px;
+}
+
+.pokemon-cart {
+  width: 400px;
+  margin: 50px;
+  border: 10px dashed #7d7d7d;
+  border-radius: 20px;
+  background-color: #ffd0da;
+}
+
+.cart-header {
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: xx-large;
+  color: #483237;
+  font-weight: bold;
+}
+
+.cart-body {
+  background-color: white;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray inset;
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-row: auto;
+}
+
+.catch-button {
+  justify-content: center;
+  display: inline-flex;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #83e6c5;
+  box-shadow: 1px 2px 3px gray;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.catch-button:hover {
+  background-color: #b9eedc;
+}
+
+.header-menu {
+  color: white;
+  background-color: #a2d06b;
+  padding: 5px;
+  top: -7px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.cats-title {
+  font-size: 80px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px #393d47;
+}
+
+.title-light {
+  color: #eda85d;
+}
+
+.title-dark {
+  color: #ffedda;
+}
+
+.cats-header {
+  text-align: center;
+}
+
+.cats-button {
+  border: 2px solid #393d47;
+  border-radius: 10px;
+  width: 100px;
+  background-color: #f2c38b;
+  color: #393d47;
+  cursor: pointer;
+}
+
+.cats-button:disabled {
+  background-color: #b4b0ac;
+  cursor: default;
+}
+
+hr {
+  border-top: 2px dashed #393d47;
+  width: 90%;
+  border-bottom: 0px;
+}
+
+.bg-light {
+  background-color: #e7dfdd;
+}
+
+.bg-dark {
+  background-color: rgb(49 41 47);
+}
+
+.red-box {
+  background-color: rgb(136, 55, 67);
+}
+
+.blue-box {
+  background-color: rgb(39, 124, 141);
+}
