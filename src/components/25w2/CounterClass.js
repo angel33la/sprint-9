@@ -6,9 +6,12 @@ class Counter extends Component {
     super();
 
     this.state = {
-      count: 0,
+      isMouseEnter: false,
     };
   }
+
+  /* this.increment = this.increment.bind(this);
+  this.decrement = this.decrement.bind(this); */
 
   increment = () => {
     this.setState({
@@ -34,10 +37,31 @@ class Counter extends Component {
 }
 
 class CounterDisplay extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isMouseEntered: false,
+    };
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ isMouseEntered: true });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ isMouseEntered: false });
+  };
+
   render() {
     return (
       <>
-        <p>Count: {this.props.num}</p>
+        <div onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+          {this.state.isMouseEntered ? "Hovering" : ""}
+          <br />
+          Count: {this.props.num}
+        </div>
+        <p>Count: {this.state.num}</p>
       </>
     );
   }

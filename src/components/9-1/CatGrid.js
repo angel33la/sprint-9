@@ -22,7 +22,40 @@ class CatGrid extends React.Component {
   }
 
   async getMoreCats() {
+    const headers = new Headers({
+      "Content-Type": "application/json",
+      "x-api-key": CAT_API_KEY,
+    });
+
+    var requestOptions = {
+      method: "GET",
+      headers: headers,
+    };
+
+    fetch(CAT_URL + MIN_CATS_TO_FETCH, requestOptions)
+      .then((response) => {
+        console.log(response);
+        if (response.status !== 200) {
+          throw new Error("Failed to fetch cats");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        this.setState((prevState) => ({
+          catArray: [...prevState.catArray, ...data],
+          isLoading: false,
+        }));
+      })
+      .catch((error) => {
+        console.error("Error fetching cats:", error);
+        this.setState({ isLoading: false });
+      });
+  }
+  async fetchCats() {
     this.setState({ isLoading: true });
+    if (this.state.catArray.length > 0) {
+      return;
+    }
 
     const reqOptions = {
       headers: {
@@ -48,6 +81,9 @@ class CatGrid extends React.Component {
     this.getMoreCats();
   };
 
+  /**
+   * @param {"light" | "dark"} theme
+   */
   updateTheme = (theme) => {
     this.setState({ theme: theme });
   };

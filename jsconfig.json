@@ -1,8 +1,9 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-      "checkJs": true,
-      "jsx": "react",
-      "module": "CommonJS"
-    }
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "checkJs": true,
+    "jsx": "react",
+    "module": "CommonJS",
+    "lib": ["ES2015", "DOM", "DOM.Iterable"]
   }
+}
