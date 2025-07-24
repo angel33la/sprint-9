@@ -8,9 +8,9 @@ function Counter(props) {
     setCount(count + 1);
   };
 
-  const decrement = () => {
+  function decrement() {
     setCount(count - 1);
-  };
+  }
 
   return (
     <>

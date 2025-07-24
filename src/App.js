@@ -1,7 +1,8 @@
 import CatGrid from "components/9-1/CatGrid";
 import "./App.css";
 import "./css/styles.css";
-import React, { useState } from "react";
+import React from "react";
+
 
 function App() {
   return (

@@ -74,3 +74,14 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+
+.count-div {
+  width: 100px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 10px;
+}
+
+.green-div {
+  background-color: green;
+}
