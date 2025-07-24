@@ -8,19 +8,22 @@ class Counter extends Component {
     this.state = {
       count: 0,
     };
+
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
   }
 
-  increment = () => {
+  increment() {
     this.setState({
       count: this.state.count + 1,
     });
-  };
+  }
 
-  decrement = () => {
+  decrement() {
     this.setState({
       count: this.state.count - 1,
     });
-  };
+  }
 
   render() {
     return (
@@ -34,13 +37,50 @@ class Counter extends Component {
 }
 
 class CounterDisplay extends Component {
+  constructor(props) {
+    console.log("Constructor has been called!");
+    super(props);
+
+    this.state = {
+      isMouseEnter: false,
+    };
+  }
+
+  componentDidMount() {
+    console.log("Component did mount!");
+  }
+
+  componentDidUpdate() {
+    console.log("Component did update!");
+  }
+
+  shouldComponentUpdate() {
+    let condition = Math.random() > 0.5;
+    console.log("Should component update???", condition);
+    return condition;
+  }
+
   render() {
+    console.log("We're about to render!");
     return (
       <>
-        <p>Count: {this.props.num}</p>
+        <div
+          id="my-count-div"
+          className={
+            this.state.isMouseEnter ? "count-div green-div" : "count-div"
+          }
+          onMouseEnter={() => this.setState({ isMouseEnter: true })}
+          onMouseLeave={() => this.setState({ isMouseEnter: false })}
+        >
+          <p>Count: {this.props.num}</p>
+        </div>
       </>
     );
   }
 }
 
 export default Counter;
+
+// onMouseEnter
+// onMouseLeave
+// onMouseOver
