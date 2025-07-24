@@ -2,7 +2,6 @@ import React from "react";
 import Loading from "./Loading";
 import Cat from "./Cat";
 import ThemeToggle from "./ThemeToggle";
-import { ThemeContext } from "context/ThemeContext";
 
 const MIN_CATS_TO_FETCH = 5;
 const CAT_URL = "https://api.thecatapi.com/v1/images/search?order=RAND&limit=";
